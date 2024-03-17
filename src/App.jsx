@@ -11,14 +11,40 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
-  },
-  {
-    path: "/about",
-    element: (
-      <div>
-        <About />
-      </div>
-    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <div>
+            <Landing />
+          </div>
+        ),
+      },
+      {
+        path: "/cocktail",
+        element: (
+          <div>
+            <Cocktail />
+          </div>
+        ),
+      },
+      {
+        path: "/newsletter",
+        element: (
+          <div>
+            <NewsLetter />
+          </div>
+        ),
+      },
+      {
+        path: "/about",
+        element: (
+          <div>
+            <About />
+          </div>
+        ),
+      },
+    ],
   },
 ]);
 const App = () => {
