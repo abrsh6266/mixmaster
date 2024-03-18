@@ -9,7 +9,8 @@ import {
   SinglePageError,
 } from "./pages";
 import { loader as landingLoader } from "./pages/Landing";
-import {loader as singleCocktailLoader} from "./pages/Cocktail"
+import { loader as singleCocktailLoader } from "./pages/Cocktail";
+import { action as newsletterAction } from "./pages/NewsLetter";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        loader:singleCocktailLoader,
+        loader: singleCocktailLoader,
         path: "cocktail/:id",
         element: (
           <div>
@@ -37,11 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: "newsletter",
-        element: (
-          <div>
-            <NewsLetter />
-          </div>
-        ),
+        action: newsletterAction,
+        element: <NewsLetter />,
       },
       {
         path: "about",
