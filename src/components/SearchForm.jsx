@@ -1,7 +1,5 @@
 const SearchForm = () => {
-  return (
-    <div>SearchForm</div>
-  )
-}
+  return <h2>SearchForm</h2>;
+};
 
-export default SearchForm
+export default SearchForm;
